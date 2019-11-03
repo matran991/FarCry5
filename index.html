@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+	<title>FAR CRY 5 VIỆT NGỮ</title>
+	<link rel="stylesheet" type="text/css" href="style.css?323">
+	<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+	<div class="bg">
+		<div class="titlebar">
+			<div class="copyright hover-link" onclick="matran999()"><span>Design By Matran999 - Gametiengviet.com</span></div>
+			<div id="-3" title="Thoát Patch" class="close-btn">ˣ</div>
+		</div>
+		<div class="slide">
+			<div class="body-slide">
+				<!--
+				<img draggable="false" id="img1" class="imgslide active" src="1.jpg">
+				-->
+				<img class="poster" src="intro.jpg" />
+				<video id="video" playsinline autoplay loop>
+					<source src="video.mp4" type="video/mp4">
+					<img draggable="false" id="img1" src="intro.jpg" />
+				</video>
+			</div>
+			<div class="content">			
+				<div class="rowButton">
+					<ul class="button-run">
+						<li id="RunPatch" class="btn btn-patch" title="Nhấn để cài đặt tiếng việt cho game Sleeping Dogs" onclick="RunCheck()">
+							CÀI PATCH VIỆT NGỮ
+							<span class="bk-hover">a</span>
+						</li>
+						<!--
+						<li id="-3" title="Nhấn để đóng patch lại." class="btn btn-exit">THOÁT RA</button>
+						-->
+						<li id="Backup" title="Nhấn để gỡ patch đã cài trong máy." onclick="RemovePatch(false)" class="btn btn-backup">
+							GỠ PATCH VIỆT NGỮ
+							<span class="bk-hover">a</span>
+						</li>
+					</ul>
+				</div>
+				<div class="row-content row3">
+					<div class="row-top row-top1 active">		
+						<ul class="text-block list-credit name-member">
+							<li class="hover-link"><span alt="icont king">♛</span><span class="animate tipso_style" title="Dịch và biên tập toàn bộ dự án.">Biên Tập &amp; Dịch: AAA aka Hurk Jr</span></li>
+							<li class="hover-link"><span alt="icont statue">♝</span><span class="animate tipso_style" title="Hack và viết tool.">Kỹ Thuật &amp; Viết Tool: Matran 999</span></li>
+							<li class="hover-link"><span alt="icont rook">♖</span><span class="animate tipso_style" title="Công thần đã theo Leader từ ngày đầu, chịu trách nhiệm dịch phụ đề thoại khu John">Cộng Tác: Toriharu</span></li>
+							<li class="hover-link"><span alt="icont rook">♖</span><span class="animate tipso_style" title="Chịu trách nhiệm dịch phụ đề khu Jacob">Cộng Tác: Copruri</span></li>
+							<li class="hover-link"><span alt="icont rook">♖</span><span class="animate tipso_style" title="Chịu trách nhiệm dịch phụ đề khu Faith">Cộng Tác: Edward</span></li>
+							<li class="hover-link"><span alt="icont rook">♖</span><span class="animate tipso_style" title="Chịu trách nhiệm dịch phụ đề HUD.">Cộng Tác: Deralam</span></li>
+						</ul>		
+						<ul class="list-console">
+							<li class="ConsoleText Console-content">
+								<span class="Text-Info"><b id="dot-write" class="dot-load">Đang Chờ...</b></span>
+							</li>						
+							<li class="ConsoleBody Console-content">
+								<label class="progress-bar">
+									<span class="percent-background">H</span>
+									<span class="percent-number">0%</span>
+								</label>
+								<label class="download-load">
+									<span class="Text-download">Đang Tải: <small title="Dung lượng đang tải" class="number-download">0</small>MB / <small title="Dung lượng gốc của file." class="number-limit">0</small>MB</span>
+								</label>
+							</li>
+						</ul>
+						<!--
+						<ul class="text-block list-server list-version">
+							<li class="title-server">Phiên bản game hiện tại của bạn.</li>
+							<li class="select-server">
+								<label title="Dùng cho bản steam." class="server-item version1" onclick="checkRadio(this)">
+									<span class="input-checkbox check-version active" alt="1"><span>a</span></span> Bản Steam
+								</label>
+								<label title="Dùng cho bản crack." class="server-item version2" onclick="checkRadio(this)">
+									<span class="input-checkbox check-version" alt="2"><span>a</span></span> Bản Thuốc
+								</label>
+							</li>
+						</ul>
+						-->
+						<ul class="text-block list-server list-credit">
+							<li class="title-server">Chọn server tải patch, nếu server hiện tại bị lỗi.</li>
+							<li class="select-server">
+								<label title="Chọn server 1 để tải patch." class="server-item server1" onclick="checkRadio(this)">
+									<span class="input-checkbox check-server active" alt="1"><span>a</span></span> Server 1
+								</label>
+								<label title="Chọn server 2 để tải patch." class="server-item server2" onclick="checkRadio(this)">
+									<span class="input-checkbox check-server" alt="2"><span>a</span></span> Server 2
+								</label>
+								<label title="Chọn server 3 để tải patch." class="server-item server3" onclick="checkRadio(this)">
+									<span class="input-checkbox check-server" alt="3"><span>a</span></span> Server 3
+								</label>
+							</li>
+						</ul>	
+						<div class="select-input">
+								<label title="Sau khi cài patch xong, sẽ tạo một phím tắt ngoài desktop." class="server-item desktop-check" onclick="checkBox(this)">
+									<span class="input-checkbox check-desktop active"><span>a</span></span> Tạo một phím tắt trên desktop.
+								</label>
+						</div>
+						<ul class="list-link">
+							<li title="Nhấn để truy cập discord Gametiengviet.&#10;Nếu bạn cần hỗ trợ về vấn đề cài patch việt ngữ." id="discord" onclick="Goto(1)" class="btn-text item-link"><img src="discord.png" /> <span>Discord</span></li>
+							<li title="Nhấn để truy cập diễn đàn Gametiengviet" id="forum" onclick="Goto(2)" class="btn-text item-link"><img src="forum.png" /> <span>Forum</span></li>
+							<li title="Nhấn để truy cập facebook Gametiengviet" id="facebook" onclick="Goto(3)" class="btn-text item-link"><img src="face.png" /> <span>Facebook</span></li>
+						</ul>
+					</div>
+					<div class="row-top row-top2">
+						<p class="title-row">Nội Dung Và Quy Định<span title="Nhấn để đóng bảng quy định lại." class="close-faq" onclick="closeFaq(this)">ˣ</span></p>
+						<div class="text-block text-box text-scroll faq-scroll">
+							<div class="content-faq">
+								<h3>Hỏi Đáp</h3>
+								Để đảm bảo mọi người hiểu rõ về dòng Soul, cũng như Dark Soul III thì mình đã dựa trên bản Nhật ngữ của game ( hãng  FormSoftware có trụ sở chính tại Nhật ). Nên đây hứa hẹn sẽ là một trải nghiệm hoàn toàn mới và vì thế sẽ có rất nhiều câu hỏi xoay quanh về vấn đề này ( Q & A) :<br><br>
+								Q1. Tại sao tác giả lại sử dụng rất nhiều từ Hán Việt trong bản dịch này?<br><br>
+								A1. Do bị giới hạn về số lượng ký tự trong một câu và nội dung mang rất nhiều hàm ý nên Việt Ngữ (tức dịch theo lối word by word) sẽ không đảm bảo được chất lượng tốt nhất cho các bạn chính vì thế để đảm bảo  NGẮN GỌN và SÚC TÍCH nên mình đã sử dụng từ Hán Việt cho bản dịch này.<br><br>
+								Q2. Ad có thể giữ nguyên tên của trang bị và địa danh trong game không?<br><br>
+								A1. Không. Vì mình muốn VIỆT HÓA HOÀN TOÀN và để mọi người hiểu được ý nghĩa của từng trang bị và địa danh trong game một cách trọn vẹn nhất. Ví dụ như : anh dương nêu ví dụ nha :3 Nhưng mình sẽ cố gắng tạo một list đối chiếu giữa từ gốc và bản dịch để các bạn tiện theo dõi và tìm hiểu.<br><br>
+								Q3. Hình như tác giả không đón nhận góp ý của mọi người thì phải?<br><br>
+								A3. Không hẳn là như vậy. Ngay từ đầu, mình đã dịch game theo bản tiếng Nhật, mình muốn trình bày demo cho mọi người để xem thái độ đón nhận của cộng đồng như thế nào. Vốn dĩ cộng đồng đã quen sử dụng bản eng, và giữa hai bản dịch eng và nhật tùy chỗ sẽ có sự sai khác. Không phải tự nhiên mà mình chọn bản dịch tiếng Nhật để dịch, mà bởi vì chính nhà sản xuất cũng từ bản Nhật mới dịch ra bản tiếng Anh. Đây là một tựa game hướng đến thị trường Tây  u, nhưng đừng vì thế mà áp đặt nó vào một khuôn mẫu là nó ở bối cảnh này, phải nói chuyện như thế kia. Hơn nữa, bản Nhật có sự tương đồng với tiếng Việt ở mặt ngôn từ và ngữ nghĩa hơn là bản eng.
+								<h3>Quy Định</h3>
+								Patch VH này hoàn toàn miễn phí không kinh doanh dưới mọi hình thức.<br><br>
+								Bản dịch thích hợp dùng trên bản Stream nhưng lưu ý:<br><br>
+								Đây là MOD nên để tránh tình trạng bị ban hay mất acc nên chơi offline, nếu bị ban thì tụi mình không chịu trách nhiệm.<br><br>
+								Khi cài mod vào, game sẽ chơi trên một file save mới.
+							</div>
+						</div>
+						<div class="agree-faq">
+							<label title="Bạn nên đọc kỹ quy định rồi hãy đồng.&#10;Khi bạn đã đọc xong, chúng tôi không chịu trách nhiệm nếu bạn làm sai với quy định được đề ra." class="server-item agree-check" onclick="checkBox(this)">
+								<span class="input-checkbox check-faq"><span>a</span></span> Tôi đã đọc và đồng ý với quy định trên.
+							</label>
+						</div>
+					</div>
+				</div>
+			<div class="fotter-row">
+				
+
+				<div class="music-row" title="Far Cry 5 - Oh John (feat.Charlie Mtn.)">
+					<div class="speaker playmusic" onclick="playMusic(this)">
+						<img src="1.gif" title="Đang phát nhạc..." class="gifImg Gif1" />
+						<img src="2.gif" title="Đã tắt nhạc." class="gifImg Gif2" />
+					</div>
+					<audio id="player" autoplay>
+							<source src="music.mp3" type="audio/mp3" />
+					</audio>
+					<div class="authorMusic text-block">
+						<div class="progress-music"></div>
+						<div class="TimeClap">
+							<span class="time-run"></span>
+							<span class="time-duration"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="version-row">
+					<div class="text-version text-block count-down">Lượt Cài: <span class="count-download">0</span></div>
+					<div class="text-version text-block">Phiên Bản: <span class="number-version">1.0</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup-layout" title="Nhấn để đóng thông báo." onclick="popupClick(this)">
+		<div class="content-popup">
+			<div class="content-popup-page">
+				<div class="title-content">Thông Báo</div>
+				<div class="tab-content"></div>
+			</div>
+			<div class="loading-popup-page">
+				<img class="loading-img" src="loading.gif"/>
+				<div class="content-loading">Vui lòng chờ trong giây lát...</div>
+			</div>
+		</div>
+	</div>
+	<div class="hide-data" style="display:none">
+		<input type="hidden" id="version-old" value="1.0" />
+		<input type="hidden" id="server1" value="" />
+		<input type="hidden" id="server2" value="" />
+		<input type="hidden" id="server3" value="" />
+		<input type="hidden" id="forum" value="" />
+		<input type="hidden" id="location" value="" />
+		<input type="hidden" id="zipname" value="" />
+		<input type="hidden" id="sizeFile" value="" />
+		<input type="hidden" id="listFile" value="" />
+		<input type="hidden" id="version-new" value="" />
+		<input type="hidden" id="version-game" value="1" />
+		<input type="hidden" id="version-crack" value="0" />
+		<textarea id="JSON" /></textarea>
+	</div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+<!--
+
+
+Dark Soul 3||1.0||- Fix lỗi chính tả.<lf>- Dịch những từ thiếu sót<lf>- Fix lỗi loot đồ<lf>- Cập nhật nội dung text mới.||Đã có bản update mới dành cho Dark Soul 3.<lf>Phiên bản hiện tại là: 1.0. <lf>Các bạn nên cập nhật lên bản mới nhất để có trải nghiệm tốt hơn.<lf><lf>* Nội dung cập nhật mới:<lf>- Fix lỗi chính tả.<lf>- Dịch những từ thiếu sót<lf>- Fix lỗi loot đồ<lf>- Cập nhật nội dung text mới.||||||||254125||https://gametiengviet.com/threads/dying-light-viet-hoa.3678/#post-34874||5.2||
+-->
+</html>
